@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.6.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Project_1</title>
+</head>
+
+<body>
+    <header class="wrapper-nav">
+        <div class="container">
+            <nav class="account-shop">
+                <div class="greeting">
+                    <p>
+                        Welcome to our website
+                    </p>
+                </div>
+                <div class="seach_shop">
+                    <input class="inputBox" id="inputBox" type="text" placeholder="Tìm sản phẩm...">
+                    <a class="search_product" href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+                <div class="account_items">
+                    <img src="img/icon-header-1.png" alt="">
+                    <input class="items_nameuser" type="submit" value="Tên Tài Khoản">
+                    <a href="index.php?btn=sign_in">
+                        <input type="submit" value="| Đăng Nhập">
+                    </a>
+                    <a href="index.php?btn=sign_up">
+                        <input type="submit" value="| Đăng Ký">
+                    </a>
+                    <a class="shopping" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </nav>
+        </div>
+        <hr>
+        <div class="container">
+            <nav class="category_shop">
+                <div class="logo">
+                    <h1>
+                        <a href="index.php?btn=home">
+                            <img src="img/image(1269)_preview_rev_1 (1).png" alt="">
+                        </a>
+                    </h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#gaquatroi">Giày Nike</a></li>
+                        <li><a href="#">Giày Adidas</a></li>
+                        <li><a href="#">Giày MLB</a></li>
+                        <li><a href="#">Giày JD</a></li>
+                        <li><a href="index.php?btn=contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="banner" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#banner" data-slide-to="0" class="active"></li>`
+                <li data-target="#banner" data-slide-to="1"></li>
+                <li data-target="#banner" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/banner1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banner2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banner3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#banner" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#banner" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+        <div class="container">
+            <div class="category">
+                <div class="box-category">
+                    <img src="img/20220316_maOThyFeQVCy9WgImsF1tmZK.jpg" alt="">
+                    <div class="items_bt">
+                        <a href="#"> <input type="submit" value="Giày Adidas"></a>
+                    </div>
+                </div>
+                <div class="box-categorys">
+                    <div class="items_category">
+                        <img src="img/chien-dich-quang-cao-nike-air-jordan-cover-elle-man.jpg" alt="">
+                        <div class="btn">
+                            <a href="#"> <input type="submit" value="Giày Adidas"></a>
+                        </div>
+                    </div>
+                    <div class="items_category">
+                        <img src="img/vans-old-skool-5-jpeg.webp" alt="">
+                        <div class="btn">
+                            <a href="#"> <input type="submit" value="Giày Adidas"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product" id="gaquatroi">
+                <div class="product_title">
+                    <h1>
+                        <hr class="before" width="250px" align="left" color="black" size="4px">
+                        <span>Top 10 Sản Phẩm </span>
+                        <hr class="after" width="250px" align="right" color="black" size="4px">
+                    </h1>
+                    <h5>
+                        <i> Khuyến Mãi Cuối Tuần</i>
+                    </h5>
+                </div>
+                <div class="container">
+                    <div class="box-products">
+                        <div class="items-product">
+                            <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                        <div class="items-product">
+                            <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                        <div class="items-product">
+                            <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                        <div class="items-product">
+                            <a href="#"><img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                        <div class="items-product">
+                            <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="box-products">
+                        <div class="items-product">
+                            <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                        <div class="items-product">
+                            <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                        <div class="items-product">
+                            <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                        <div class="items-product">
+                            <a href="#"><img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                        <div class="items-product">
+                            <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                            <div class="text">
+                                <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                                <span>4,290,000đ</span>
+                            </div>
+                            <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="other_products">
+                <div class="product_title">
+                    <h1>
+                        <hr class="before" width="250px" align="left" color="black" size="4px">
+                        <span>Sản Phẩm Nổi Bật</span>
+                        <hr class="after" width="250px" align="right" color="black" size="4px">
+                    </h1>
+                    <h5>
+                        <i> Khuyến Mãi Cuối Tuần</i>
+                    </h5>
+                </div>
+
+                <div class="btn_other_products">
+                    <button> Giày Nike
+                    </button>
+                    <button> Giày Jordan
+                    </button>
+                    <button> Vans
+                    </button>
+                    <button> Giày Mlb
+                    </button>
+                </div>
+                <div class="box-products">
+                    <div class="items-product">
+                        <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                    <div class="items-product">
+                        <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                    <div class="items-product">
+                        <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                    <div class="items-product">
+                        <a href="#"><img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                    <div class="items-product">
+                        <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                </div>
+
+                <div class="box-products">
+                    <div class="items-product">
+                        <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                    <div class="items-product">
+                        <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                    <div class="items-product">
+                        <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                    <div class="items-product">
+                        <a href="#"><img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                    <div class="items-product">
+                        <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
+                        <div class="text">
+                            <p>Giày Nike Air Jordan 1 Mid SE ‘Varsity Purple’ </p>
+                            <span>4,290,000đ</span>
+                        </div>
+                        <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
+                    </div>
+                </div>
+
+
+                <div class="buttons">
+                    <button class="btn"><span></span>
+                        <p data-start="good luck!" data-text="next>>>" data-title="Xem sản phẩm khác"></p>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- Start Footer -->
+    <footer>
+        <div class="container footer_all">
+            <div class="ft_category">
+                <a href="#">
+                    <img src="img/image(1269)_preview_rev_1 (1).png" alt="">
+                </a>
+                <p>
+                    Thái Hòa, Triệu Sơn, Thanh Hóa
+                </p>
+                <p>
+                    Hienttph30200@fpt.edu.vn
+                </p>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+            <div class="ft_category">
+                <h4>
+                    Danh Mục Nổi Bật
+                </h4>
+                <p>Giày Nike</p>
+                <p>Giày Jordan</p>
+                <p>Giày Vans</p>
+                <p>Giày MLB</p>
+            </div>
+            <div class="ft_category">
+                <h4>
+                    Chính sách công ty
+                </h4>
+                <p>Vận chuyển và giao hàng</p>
+                <p>Chính sách bán hàng</p>
+                <p>Liên Hệ với chúng tôi</p>
+            </div>
+            <div class="ft_category">
+                <h4>
+                    Địa Chỉ Shop
+                </h4>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14588.674990605203!2d105.606681!3d19.7667925!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136fb182dad8681%3A0x9a3e26e542573e8!2zSMOyYSBZw6puLCBUaMOhaSBIw7JhLCBUcmnhu4d1IFPGoW4sIFRoYW5oIEhvw6E!5e1!3m2!1svi!2s!4v1688375583040!5m2!1svi!2s"
+                    width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+</body>
+
+</html>
