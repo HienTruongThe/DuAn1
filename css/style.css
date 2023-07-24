@@ -267,20 +267,21 @@ main {
 }
 
 .box-products {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
-  width: 100%;
+  grid-row-gap: 30px;
 }
 
 .items-product {
   width: 200px;
-  margin: 10px;
+  height: 380px;
   display: flex;
-  overflow: hidden;
-  min-height: 400px;
-  position: relative;
-  align-items: center;
   flex-direction: column;
+  align-items: center; 
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .items-product:hover {
@@ -854,7 +855,7 @@ p {
 .buy_product {
   gap: 30px;
   display: grid;
-  margin-top: 10%;
+  margin-top: 250px;
   font-size: small;
   grid-template-columns: auto auto 40%;
 }
@@ -1008,6 +1009,7 @@ textarea {
   align-items: center;
   border: 0.5px solid gray;
   grid-template-columns: 20% 20% auto auto auto auto;
+  margin-top: 20px;
 }
 
 .product_willpay img {
@@ -1054,4 +1056,221 @@ textarea {
 .willpay_buyproduct:hover {
   background: #e32124;
   transition: .3s ease;
+}
+
+/* CSS contact*/
+.contact {
+  display: flex;
+  width: 100%;
+  height: 800px;
+
+}
+
+.contact_items {
+  margin-right: 0;
+  margin-left: 250px;
+}
+
+.send_items {
+  width: 100px;
+  height: 50px;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 30px;
+  margin-left: 60px;
+}
+
+.btn_send input {
+  border: none;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn_send span {
+  padding: 10px 12px;
+  border-radius: 30px;
+  background-color: #6da5ee;
+  color: white;
+}
+
+.btn_send span i {
+  width: 10px;
+  height: 16px;
+  color: white;
+  margin-right: 6px;
+}
+
+.send_items:hover {
+  transform: translateY(3px);
+  box-shadow: 0 20px 30px -6px rgba(41, 97, 228, 0.5);
+}
+
+.contact_items_icon {
+  margin: 75px 150px 400px 70px;
+}
+
+.contact_info span i {
+  font-size: 35px;
+}
+
+
+
+/* CSS Sign in */
+
+.sign-items {
+
+  width: 400px;
+  height: auto;
+  border: 1px solid black;
+  margin-top: 200px;
+  margin-bottom: 140px;
+  border-radius: 15px;
+}
+
+.sign-title {
+  text-align: center;
+  margin: 5% 0;
+}
+.sign_form{
+  padding-top: 20px;
+  margin: 0 30px;
+}
+.input-group {
+
+  position: relative;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-items {
+  width: 340px;
+  height: 60px;
+  border: solid 1.5px #9e9e9e;
+  border-radius: 1rem;
+  background: none;
+  padding: 1rem;
+  /* font-size: 25px; */
+  color: black;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-label {
+
+  position: absolute;
+  left: 15px;
+  color: black;
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-items:focus,
+.input-items:valid {
+  outline: none;
+  border: 1.5px solid #1a73e8;
+}
+
+.input-items:focus~label,
+.input-items:valid~label {
+  transform: translateY(-50%) scale(0.8);
+  background-color: #fff;
+  padding: 0 .2em;
+  color: #2196f3;
+  font-size: 20px;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.forgot {
+  display: flex;
+  justify-content: space-between;
+}
+.show{
+  margin: 10px 0;
+}
+.forgot_items{
+ margin: 10px 20px;
+}
+.strikethrough{
+  width: 300px;
+  height: 1px;
+  background-color: rgb(38, 35, 35);
+  margin: 0 auto;
+}
+.account_sign{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.account_sign .sign_in input {
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #12d275;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+.account_sign .sign_up input{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2664f5;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 9px;
+}
+/* CSS SIGN_UP */
+
+.sign_up{
+  margin-top: 200px;
+  margin-bottom: 140px;
+ width: 700px;
+ height: 600px;
+}
+.form_sign_up{
+  height: 300px;
+}
+.items_sign_up{
+  display: flex;
+}
+.items_sign_up .input-group{
+  margin: 20px 0;
+}
+/* Croll */
+.scroll{
+  display: none ;
+  transition: 0.5s ease-in-out;
+}
+/* Forgot password */
+.forgot_password{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 290px auto;
+}
+.forgot_pw{
+  width: 500px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.forgot_password_items{
+  margin: auto 60px;
+}
+/* Notification */
+.no_error{
+   color: #12d275;
+   margin-left: 40px;
 }

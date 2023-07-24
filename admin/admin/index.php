@@ -1,11 +1,11 @@
 <?php
-include_once '../model/pdo.php';
-include '../model/loai.php';
-include '../model/sanpham.php';
-include '../model/taikhoan.php';
-include '../model/thuvienanh.php';
-// include '../model/banner.php';
-include '../model/binhluan.php';
+include_once '../php/model/pdo.php';
+include '../php/model/loai.php';
+include '../php/model/sanpham.php';
+include '../php/model/taikhoan.php';
+include '../php/model/thuvienanh.php';
+// include '../php/model/banner.php';
+include '../php/model/binhluan.php';
 include "header.php";
 // include "category/home_dm.php";
 if (isset($_GET['btn'])) {

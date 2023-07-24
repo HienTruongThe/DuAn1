@@ -28,15 +28,17 @@
                         <a class="search_product" href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                     <div class="account_items">
-                        <img src="img/icon-header-1.png" alt="">
-                        <input class="items_nameuser" type="submit" value="Tên Tài Khoản">
+                        <a href="index.php?btn=edit_acount">
+                            <img src="img/icon-header-1.png" alt="">
+                            <input class="items_nameuser" type="submit" value="Tên Tài Khoản">
+                        </a>
                         <a href="index.php?btn=sign_in">
                             <input type="submit" value="Đăng Nhập">
                         </a>
                         <a href="index.php?btn=sign_up">
                             <input type="submit" value="Đăng Ký">
                         </a>
-                        <a class="shopping" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a class="shopping" href="index.php?btn=shopping"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                 </nav>
             </div>
@@ -52,11 +54,11 @@
                     </div>
                     <div class="menu">
                         <ul>
-                            <li><a href="#gaquatroi">Giày Nike</a></li>
-                            <li><a href="#">Giày MLB</a></li>
-                            <li><a href="#">Giày Vans</a></li>
-                            <li><a href="#">Giày JD</a></li>
-                            <li><a href="#">Phụ Kiện</a></li>
+                            <li><a href="index.php?btn=product">Giày Nike</a></li>
+                            <li><a href="index.php?btn=product">Giày MLB</a></li>
+                            <li><a href="index.php?btn=product">Giày Vans</a></li>
+                            <li><a href="index.php?btn=product">Giày JD</a></li>
+                            <li><a href="index.php?btn=product">Phụ Kiện</a></li>
                             <li><a href="index.php?btn=contact">Liên Hệ</a></li>
                         </ul>
                     </div>
@@ -68,8 +70,8 @@
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
+        $(document).ready(function() {
+            $(window).scroll(function() {
                 if ($(this).scrollTop()) {
                     $('.account-shop').addClass('scroll')
                 } else {

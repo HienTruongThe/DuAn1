@@ -102,11 +102,6 @@
                         </div>
                         <a class="view" href="#"><i class="fa-solid fa-money-bill-1-wave"> Mua Ngay </i></a>
                     </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="box-products">
                     <div class="items-product">
                         <a href="#"> <img src="img/20220315_w7EFPGZ049S1i6yguUbps91Y.jpg" alt=""></a>
                         <div class="text">
