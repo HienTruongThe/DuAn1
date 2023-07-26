@@ -18,35 +18,83 @@ if (isset($_GET['btn']) && ($_GET['btn'] != "")) {
             //Acount
         case 'sign_up':
             if (isset($_POST['add_tk']) && ($_POST['add_tk'])) {
-                $ho_ten = $_POST['name_tk'];
-                $mat_khau = $_POST['pass_word'];
                 $email = $_POST['email'];
-                $sdt = $_POST['phone'];
-                $dia_chi = $_POST['address'];
-                insert_taikhoan($ho_ten, $mat_khau, $email, $sdt, $dia_chi);
-                $thong_bao = "Chúc mừng bạn đăng ký thành công &#9996";
+                $name = $_POST['name_tk'];
+                $phone = $_POST['phone'];
+                $pass = $_POST['pass_word'];
+                $address = $_POST['address'];
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $errors = [];
+                    if (empty(trim($email))) {
+                        $errors['email'] = "Không được để trống ⚠";
+                    } else {
+                        if (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) {
+                            $errors['email'] = "Email không hợp lệ ⚠";
+                        }
+                    }
+
+                    if (empty(trim($name))) {
+                        $errors['name_tk'] = "Không được để trống ⚠";
+                    }
+
+                    if (empty($pass)) {
+                        $errors['pass_word'] = "Không được để trống ⚠ ";
+                    }
+
+                    // if (($phone) > 11) {
+                    //     $errors['phone'] = "Số điện thoại bạn nhập không đúng";
+                    // }
+                    if (empty($address)) {
+                        $errors['address'] = "Không được để trống ⚠ ";
+                    }
+                }
+                if (empty($errors)) {
+                    insert_taikhoan($name, $email, $pass, $phone, $address);
+                    $thong_bao = "Bạn Đã Đăng Ký Thành Công 😆😆😆";
+                  
+                }
             }
             include "view/account/sign_up.php";
             break;
         case 'sign_in':
             if (isset($_POST['signin']) && ($_POST['signin'])) {
                 $email = $_POST['email'];
-                $password = $_POST['password'];
-                $check = loadone_taikhoan($email, $password);
-                if (is_array($check)) {
-                    $_SESSION['user'] = $check;
+                $pass = $_POST['password'];
+              
+                $check_acount = check_acount($email, $pass);
+                if (is_array($check_acount)) {
+                    $_SESSION['user'] = $check_acount;
                     header('Location:index.php');
                 } else {
-                    $thong_bao = "Tài khoản không tồn tại";
+                    $thong_bao = "Tài khoản không tồn tại !!!";
                 }
             }
             include "view/account/sign_in.php";
             break;
         case 'forgot_password':
-
+            if (isset($_POST['send']) && ($_POST['send'])) {
+                $email = $_POST['email'];
+                $check_email = check_email($email);
+                if (is_array($check_email)) {
+                    $thong_bao = "Mật Khẩu của bạn là : " . $check_email['mat_khau'];
+                } else {
+                    $thong_bao = "Email này không tồn tại";
+                }
+            }
             include "view/account/fogot.php";
             break;
         case 'edit_acount':
+            if (isset($_POST['update_tk']) && ($_POST['update_tk'])) {
+                $email = $_POST['email'];
+                $name = $_POST['name_tk'];
+                $phone = $_POST['phone'];
+                $pass = $_POST['pass_word'];
+                $address = $_POST['address'];
+                $ma_tk = $_POST['ma_tk'];
+                update_taikhoan($ma_tk, $name, $pass, $email, $phone, $address);
+                $_SESSION['user'] = check_acount($email, $pass);
+                header("Location: index.php?btn=edit_acount");
+            }
 
             include "view/account/update_tk.php";
             break;
@@ -63,6 +111,9 @@ if (isset($_GET['btn']) && ($_GET['btn'] != "")) {
             break;
         case 'oder':
             include "view/order/oder.php";
+            break;
+        case 'details':
+            include "view/product/product_details.php";
             break;
         case 'success':
             include "view/order/order_success.php";

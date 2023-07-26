@@ -2,7 +2,7 @@
 if (!function_exists('loadall_danhmuc')) {
     function loadall_danhmuc()
     {
-        $sql = "SELECT * FROM `loai` order by `ma_loai` ";
+        $sql = "SELECT * FROM `loai` order by `ma_loai` desc ";
         $danhmuc = pdo_query($sql);
         return $danhmuc;
     }
@@ -19,15 +19,15 @@ if (!function_exists('delete_danhmuc')) {
 
     function delete_danhmuc($id)
     {
-        $sql = "DELETE FROM loai WHERE `loai`.`ma_loai` = '$id'";
+        $sql = "DELETE FROM `loai` WHERE `ma_loai` = ".$id;
         pdo_execute($sql);
     }
 }
 if (!function_exists('update_danhmuc')) {
 
-    function update_danhmuc($id, $tenloai)
+    function   update_danhmuc($ma_loai, $name_dm)
     {
-        $sql = "UPDATE `loai` SET `ten_loai` = '$tenloai' WHERE `loai`.`ma_loai` = '$id'";
+        $sql = "UPDATE `loai` SET `ten_loai` = '". $name_dm."' WHERE `loai`.`ma_loai` =".$ma_loai;
         pdo_execute($sql);
     }
 }
@@ -35,9 +35,11 @@ if (!function_exists('loadone_danhmuc')) {
 
     function loadone_danhmuc($id)
     {
-        $sql = "SELECT * FROM `loai`where `ma_loai`='$id'";
+        $sql = "SELECT * FROM `loai` where `ma_loai`=".$id;
         $dm = pdo_query_one($sql);
         return $dm;
+
     }
+
 }
 ?>

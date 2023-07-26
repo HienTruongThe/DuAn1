@@ -28,16 +28,26 @@
                         <a class="search_product" href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                     <div class="account_items">
-                        <a href="index.php?btn=edit_acount">
-                            <img src="img/icon-header-1.png" alt="">
-                            <input class="items_nameuser" type="submit" value="Tên Tài Khoản">
-                        </a>
-                        <a href="index.php?btn=sign_in">
-                            <input type="submit" value="Đăng Nhập">
-                        </a>
-                        <a href="index.php?btn=sign_up">
-                            <input type="submit" value="Đăng Ký">
-                        </a>
+                        <?php
+                        if (isset($_SESSION['user'])) {
+                            echo '
+                                <a href="index.php?btn=edit_acount">
+                                    <img src="img/icon-header-1.png" alt="">
+                                    <input class="items_nameuser" type="submit" value="'.$_SESSION['user']['ho_ten'].'">
+                                </a>
+                            ';
+                        } else {
+                            echo '
+                                <a href="index.php?btn=sign_in">
+                                    <input type="submit" value="Đăng Nhập">
+                                </a>
+                                <a href="index.php?btn=sign_up">
+                                    <input type="submit" value="Đăng Ký">
+                                </a>
+                            ';
+                        }
+                        ?>
+
                         <a class="shopping" href="index.php?btn=shopping"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                 </nav>

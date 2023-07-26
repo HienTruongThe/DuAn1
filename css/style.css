@@ -268,20 +268,20 @@ main {
 
 .box-products {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-content: center;
   grid-row-gap: 30px;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto auto;
 }
 
 .items-product {
-  width: 200px;
-  height: 380px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
   margin: 10px;
-  position: relative;
+  display: flex;
   overflow: hidden;
+  max-width: 200px;
+  min-height: 400px;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
 }
 
 .items-product:hover {
@@ -843,8 +843,9 @@ p {
 }
 
 .detail_product {
-  margin-top: 15%;
+  gap: 30px;
   display: grid;
+  margin-top: 15%;
   grid-template-columns: 20% 75%;
 }
 
@@ -1133,10 +1134,12 @@ textarea {
   text-align: center;
   margin: 5% 0;
 }
-.sign_form{
+
+.sign_form {
   padding-top: 20px;
   margin: 0 30px;
 }
+
 .input-group {
 
   position: relative;
@@ -1168,8 +1171,7 @@ textarea {
   transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-items:focus,
-.input-items:valid {
+.input-items:focus {
   outline: none;
   border: 1.5px solid #1a73e8;
 }
@@ -1193,23 +1195,28 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
-.show{
+
+.show {
   margin: 10px 0;
 }
-.forgot_items{
- margin: 10px 20px;
+
+.forgot_items {
+  margin: 10px 20px;
 }
-.strikethrough{
+
+.strikethrough {
   width: 300px;
   height: 1px;
   background-color: rgb(38, 35, 35);
   margin: 0 auto;
 }
-.account_sign{
+
+.account_sign {
   margin-top: 20px;
   margin-bottom: 40px;
   text-align: center;
 }
+
 .account_sign .sign_in input {
   width: 120px;
   height: 50px;
@@ -1220,7 +1227,8 @@ textarea {
   font-size: 15px;
   font-weight: 700;
 }
-.account_sign .sign_up input{
+
+.account_sign .sign_up input {
   width: 200px;
   height: 50px;
   border-radius: 10px;
@@ -1231,46 +1239,56 @@ textarea {
   font-weight: 700;
   margin-left: 9px;
 }
+
 /* CSS SIGN_UP */
 
-.sign_up{
+.sign_up {
   margin-top: 200px;
   margin-bottom: 140px;
- width: 700px;
- height: 600px;
+  width: 700px;
+  height: 600px;
 }
-.form_sign_up{
+
+.form_sign_up {
   height: 300px;
 }
-.items_sign_up{
+
+.items_sign_up {
   display: flex;
 }
-.items_sign_up .input-group{
+
+.items_sign_up .input-group {
   margin: 20px 0;
 }
+
 /* Croll */
-.scroll{
-  display: none ;
+.scroll {
+  display: none;
   transition: 0.5s ease-in-out;
 }
+
 /* Forgot password */
-.forgot_password{
+.forgot_password {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 290px auto;
 }
-.forgot_pw{
+
+.forgot_pw {
   width: 500px;
   height: auto;
   border: 1px solid black;
   border-radius: 15px;
 }
-.forgot_password_items{
+
+.forgot_password_items {
   margin: auto 60px;
 }
+
 /* Notification */
-.no_error{
-   color: #12d275;
-   margin-left: 40px;
+.notification {
+  text-align: center;
+  color: #12d275;
+ 
 }

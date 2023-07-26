@@ -11,28 +11,48 @@ include "header.php";
 if (isset($_GET['btn'])) {
    $btn = $_GET['btn'];
    switch ($btn) {
-      case 'home':
-         include "home.php";
-         break;
+
          //CATERGORY
       case 'add_dm':
          if (isset($_POST['add_new']) && $_POST['add_new']) {
             $tenloai = $_POST['tenloai'];
             if ($tenloai != "") {
-                insert_danhmuc($tenloai);
-                $thongbao = "Thêm thành công";
+               insert_danhmuc($tenloai);
+               $thongbao = "Thêm thành công";
             } else {
-                $error = "Tên loại không được để trống!";
+               $error = "Tên loại không được để trống!";
             }
-        }
+         }
          include "category/add_dm.php";
          break;
       case 'list_dm':
+         $list_dm = loadall_danhmuc();
          include "category/list_dm.php";
          break;
-      case 'update_dm':
+      case 'delet_dm':
+         if (isset($_GET['ma_loai']) && ($_GET['ma_loai'] > 0)) {
+            delete_danhmuc($_GET['ma_loai']);
+         }
+         $list_dm = loadall_danhmuc();
+         include "category/list_dm.php";
+         break;
+      case 'edit':
+         if (isset($_GET['ma_loai']) && ($_GET['ma_loai'] > 0)) {
+            $dm = loadone_danhmuc($_GET['ma_loai']);
+         }
          include "category/update_dm.php";
          break;
+         
+      case 'update':
+         if(isset($_POST['update_new']) && ($_POST['update_new'])){
+            $ma_loai = $_POST['ma_loai'];
+            $name_dm = $_POST['name_dm'];
+            update_danhmuc($ma_loai, $name_dm);
+            $thong_bao = "Cập nhật thành công";
+         }
+         include "category/update_dm.php";
+         break;
+
          //PRODUCTS
       case 'page_sp':
          include "products/page_sp.php";

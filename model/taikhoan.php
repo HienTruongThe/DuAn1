@@ -10,9 +10,9 @@ if (!function_exists('loadall_taikhoan')) {
 }
 if (!function_exists('insert_taikhoan')) {
 
-    function insert_taikhoan($ho_ten, $mat_khau, $email, $vai_tro, $sdt)
+    function insert_taikhoan($name, $email, $pass, $phone, $address)
     {
-        $sql = "INSERT INTO `tai_khoan` (`ho_ten`, `mat_khau`, `email`,`vai_tro`,`so_dien_thoai`) VALUES ('$ho_ten', '$mat_khau', '$email', '$vai_tro','$sdt')";
+        $sql = "INSERT INTO `tai_khoan`( `ho_ten`, `email`, `mat_khau`, `sdt`, `dia_chi` ) VALUES ('$name','$email','$pass','$phone','$address')";
         pdo_execute($sql);
     }
 }
@@ -30,9 +30,9 @@ if (!function_exists('loadone_taikhoan')) {
 }
 if (!function_exists('update_taikhoan')) {
 
-    function update_taikhoan($id, $ho_ten, $email, $sdt, $ngaysinh, $diachi)
+    function update_taikhoan($ma_tk, $name,$pass, $email, $phone, $address)
     {
-        $sql = "UPDATE `san_pham` SET `ho_ten` = '$ho_ten', `email` = '$email', `so_dien_thoai` = '$sdt', `ngay_sinh` = '$ngaysinh',`dia_chi` = '$diachi' WHERE `tai_khoan`.`ma_tk` = '$id'";
+        $sql = "UPDATE `tai_khoan` SET `ho_ten`='$name',`email`='$email',`mat_khau`='$pass',`sdt`='$phone',`dia_chi`='$address' WHERE `ma_tk`='$ma_tk'";
         pdo_execute($sql);
     }
 }
@@ -53,4 +53,20 @@ if (!function_exists('delete_taikhoan')) {
         pdo_execute($sql);
     }
 }
-?>
+if (!function_exists('check_acount')) {
+
+    function check_acount($email, $pass)
+    {
+        $sql = "SELECT * FROM  `tai_khoan` WHERE `email`='" . $email . "' AND `mat_khau`='" . $pass . "'";
+        $kh = pdo_query_one($sql);
+        return $kh;
+    }
+}
+if (!function_exists('check_email')) {
+    function check_email($email)
+    {
+        $sql = "SELECT * FROM `tai_khoan` WHERE `email` = '" . $email . "' ";
+        $kh = pdo_query_one($sql);
+        return $kh;
+    }
+}
