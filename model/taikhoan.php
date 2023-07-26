@@ -49,7 +49,7 @@ if (!function_exists('delete_taikhoan')) {
 
     function delete_taikhoan($id)
     {
-        $sql = "DELETE FROM `tai_khoan` WHERE `tai_khoan`.`ma_tk` = '$id'";
+        $sql = "DELETE FROM `tai_khoan` WHERE `ma_tk` = ".$id;
         pdo_execute($sql);
     }
 }

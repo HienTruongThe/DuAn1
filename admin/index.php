@@ -65,6 +65,14 @@ if (isset($_GET['btn'])) {
          break;
          //USER
       case 'page_kh':
+         $list_user = loadall_taikhoan();
+         include "user/list_kh.php";
+         break;
+      case 'delete_user':
+         if(isset($_GET['ma_tk']) && ($_GET['ma_tk'])){
+            delete_taikhoan($_GET['ma_tk']);
+         }
+         $list_user = loadall_taikhoan();
          include "user/list_kh.php";
          break;
          //COMMENT
