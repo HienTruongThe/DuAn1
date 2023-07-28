@@ -8,6 +8,7 @@
             </div>       
             <p class="notification">
                         <?php
+                        
                         if (isset($thong_bao) && ($thong_bao != "")) {
                             echo $thong_bao;
                         }
@@ -41,9 +42,9 @@
                         <input  type="text" name="phone" class="input-items">
                         <label class="user-label">Số điện thoại</label>
                         <?php
-                        // if(!empty( $errors['phone'])){
-                        //     echo '<p class="error">' . $errors['phone'] . '</p>';
-                        // }
+                        if(!empty($errors['phone'])){
+                            echo '<p class="error">' . $errors['phone'] . '</p>';
+                        }
                         ?>
                     </div>
                     <div class="input-group">

@@ -10,7 +10,7 @@
 
 header {
     width: 250px;
-    /* height:100%; */
+     height: auto;
     background-color: #f83744d9;
     color: white;
 }
@@ -184,7 +184,25 @@ main {
     width: 20px;
     height: 20px;
 }
-
+.variant{
+  display: flex;
+  flex-direction: column;
+}
+.variant_title{
+    display: flex;
+    
+}
+.variant_title p{
+  margin: 10px 0;
+}
+.variant_items{
+    margin-top: 10px;
+}
+.variant_items .size{
+   width: 17px;
+   height: 17px;
+   
+}
 /*CSS List PRODUCT*/
 
 .content-product{

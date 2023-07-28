@@ -79,20 +79,30 @@
         </div>
         <div class="evaluate_right">
             <button class="er_detail">Đánh giá</button>
-            <div class="er_comment">
-                <!-- <div class="er_signin">
-                    <button class="er_dangnhap">Đăng nhập để đánh giá</button>
-                </div> -->
-                <div class="er_signin_success">
-                    <button class="er_dangnhap"
-                        onclick="alert('Chân thành cảm ơn bạn đã đánh giá sản phẩm của chúng tôi')">Gửi đánh
-                        giá</button>
-                </div>
-                <div class="er_usercomment">
-                    <textarea class="er_usercomment_items" name="" id="" cols="50" rows="8"
-                        placeholder="Nhập nội dung"></textarea>
-                </div>
-            </div>
+            <?php
+            $danh_gia = "alert('Chân thành cảm ơn bạn đã đánh giá sản phẩm của chúng tôi')";
+            if(isset($_SESSION['user'])){
+                 echo '
+                 <div class="er_comment">
+                 <!-- <div class="er_signin">
+                     <button class="er_dangnhap">Đăng nhập để đánh giá</button>
+                 </div> -->
+                 <div class="er_signin_success">
+                     <button class="er_dangnhap"
+                         onclick="'.$danh_gia.'">Gửi đánh
+                         giá</button>
+                 </div>
+                 <div class="er_usercomment">
+                     <textarea class="er_usercomment_items" name="" id="" cols="50" rows="8"
+                         placeholder="Nhập nội dung"></textarea>
+                 </div>
+             </div>
+                 ';
+            } else {
+                echo '<h3 class="error">Vui lòng đăng nhập / đăng ký để có thể đánh giá</h3>';
+            }
+            ?>
+         
             <h4 class="mg_topall">Đánh giá sản phẩm:</h4>
             <p class="mg_topall mg_leftall">Chưa có đánh giá sản phẩm nào.</p>
         </div>

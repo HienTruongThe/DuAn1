@@ -14,6 +14,7 @@
             <div style="width: 15%;" class="product-title">Thao Tác</div>
         </div>
         <?php
+        $sum = 0;
           $delete="return confirm('Bạn có chắc chắn muốn xóa')";
           foreach ($list_user as $list ) {
         
@@ -21,7 +22,7 @@
             $delete_user = "index.php?btn=delete_user&ma_tk=" . $ma_tk;
             echo '
             <div  class="content-product">
-            <div style="width: 10%;" class="product-items">1</div>
+            <div style="width: 10%;" class="product-items">'.$sum++.'</div>
             <div style="width: 10%;" class="product-items">'.$ma_tk.'</div>
             <div style="width: 20%;" class="product-items">'.$ho_ten.'</div>
             <div style="width: 20%;" class="product-items">'.$sdt.'</div>

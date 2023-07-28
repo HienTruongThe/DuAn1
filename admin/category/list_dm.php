@@ -10,21 +10,24 @@
             <div style="width: 25%;" class="product-title">Thao Tác</div>
         </div>
         <?php
-    $confilm = "return confirm('Bạn có chắc chắn muốn xóa')";
-    $film_edit = "return confirm('Bạn có chắc chắn muốn sửa')";
+        $confilm = "return confirm('Bạn có chắc chắn muốn xóa')";
+        $film_edit = "return confirm('Bạn có chắc chắn muốn sửa')";
+        $sum = 0;
         foreach ($list_dm as $list) {
-           
+          
             extract($list);
-            $edit = "index.php?btn=edit&ma_loai=".$ma_loai;
-            $delet = "index.php?btn=delet_dm&ma_loai=".$ma_loai;
+      
+            $edit = "index.php?btn=edit&ma_loai=" . $ma_loai;
+            $delet = "index.php?btn=delet_dm&ma_loai=" . $ma_loai;
             echo '
             <div class="content-product">
-            <div style="width: 15%;" class="product-items">1</div>
-            <div style="width: 25%;" class="product-items">'.$ma_loai.'</div>
-            <div style="width: 35%;" class="product-items">'.$ten_loai.'</div>
-            <div style="width: 25%;" class="product-items"> <a href="'. $edit.'"><input type="button" value="Edit" class="operation" onclick="'. $film_edit.'" ></a> | <a href="'.$delet.'"><input type="button" value="Delete" class="operation"  onclick="'. $confilm.'" ></a></div>
+            <div style="width: 15%;" class="product-items">'.$sum++.'</div>
+            <div style="width: 25%;" class="product-items">' . $ma_loai . '</div>
+            <div style="width: 35%;" class="product-items">' . $ten_loai . '</div>
+            <div style="width: 25%;" class="product-items"> <a href="' . $edit . '"><input type="button" value="Edit" class="operation" onclick="' . $film_edit . '" ></a> | <a href="' . $delet . '"><input type="button" value="Delete" class="operation"  onclick="' . $confilm . '" ></a></div>
             </div>
                  ';
+
         }
         ?>
 

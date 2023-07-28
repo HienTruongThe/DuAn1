@@ -13,7 +13,7 @@
     <div class="page">
         <header>
             <div class="account">
-            <img src="../img/1967574.png" alt="">
+                <img src="../img/1967574.png" alt="">
                 <h2>
                     Tên Admin
                 </h2>
@@ -21,6 +21,7 @@
             </div>
             <div class="category_admin">
                 <ul>
+                    <li></li>
                     <li><a href="index.php?btn=list_dm"><i class="fa-solid fa-bars"></i> Danh Mục</a></li>
                     <li><a href="index.php?btn=list_sp"><i class="fa-brands fa-product-hunt"></i> Sản Phẩm</a></li>
                     <li><a href="index.php?btn=page_kh"><i class="fa-solid fa-users"></i> Khách Hàng </a></li>
@@ -37,4 +38,3 @@
                 <i class="fa-brands fa-square-instagram"></i>
             </div>
         </header>
-    

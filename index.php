@@ -23,6 +23,7 @@ if (isset($_GET['btn']) && ($_GET['btn'] != "")) {
                 $phone = $_POST['phone'];
                 $pass = $_POST['pass_word'];
                 $address = $_POST['address'];
+
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $errors = [];
                     if (empty(trim($email))) {
@@ -36,14 +37,17 @@ if (isset($_GET['btn']) && ($_GET['btn'] != "")) {
                     if (empty(trim($name))) {
                         $errors['name_tk'] = "Không được để trống ⚠";
                     }
-
+                    if (empty($phone)) {
+                        $errors['phone'] = "Không được để trống ⚠";
+                    } else {
+                        if (!preg_match('/^[0-9]{10}+$/', $phone)) {
+                            $errors['phone'] = "Số điện thoại không đúng";
+                        }
+                    }
                     if (empty($pass)) {
                         $errors['pass_word'] = "Không được để trống ⚠ ";
                     }
 
-                    // if (($phone) > 11) {
-                    //     $errors['phone'] = "Số điện thoại bạn nhập không đúng";
-                    // }
                     if (empty($address)) {
                         $errors['address'] = "Không được để trống ⚠ ";
                     }
@@ -51,7 +55,6 @@ if (isset($_GET['btn']) && ($_GET['btn'] != "")) {
                 if (empty($errors)) {
                     insert_taikhoan($name, $email, $pass, $phone, $address);
                     $thong_bao = "Bạn Đã Đăng Ký Thành Công 😆😆😆";
-                  
                 }
             }
             include "view/account/sign_up.php";
@@ -60,13 +63,27 @@ if (isset($_GET['btn']) && ($_GET['btn'] != "")) {
             if (isset($_POST['signin']) && ($_POST['signin'])) {
                 $email = $_POST['email'];
                 $pass = $_POST['password'];
-              
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $errors = [];
+                    if (empty(trim($email))) {
+                        $errors['email'] = "Không được để trống ⚠";
+                    } else {
+                        if (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) {
+                            $errors['email'] = "Email không hợp lệ ⚠";
+                        }
+                    }
+                    if (empty($pass)) {
+                        $errors['pass_word'] = "Không được để trống ⚠ ";
+                    }
+                }
                 $check_acount = check_acount($email, $pass);
-                if (is_array($check_acount)) {
-                    $_SESSION['user'] = $check_acount;
-                    header('Location:index.php');
-                } else {
-                    $thong_bao = "Tài khoản không tồn tại !!!";
+                if (empty($errors)) {
+                    if (is_array($check_acount)) {
+                        $_SESSION['user'] = $check_acount;
+                        header('Location:index.php');
+                    } else {
+                        $thong_bao = "Tài khoản không tồn tại !!!";
+                    }
                 }
             }
             include "view/account/sign_in.php";

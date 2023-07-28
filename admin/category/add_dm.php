@@ -25,8 +25,14 @@
                     </div>
 
                     <div class="input-group" style="margin-left: 60px;">
-                        <input required="" type="text" name="tenloai" autocomplete="off" class="items_input">
+                        <input  type="text" name="tenloai" autocomplete="off" class="items_input">
                         <label class="user-label">Tên Danh Mục</label>
+                             <p class="error">
+                    <?php if (isset($error)) {
+                        echo $error;
+                    }
+                    ?>
+                </p>
                     </div>
 
                 </div>
@@ -37,12 +43,7 @@
                     <a href="index.php?btn=list_dm"><input type="button" name="list_dm" value="Danh Sách" class="btn_submit" style="border: none;"></a>
                 </div>
 
-                <h3 class="error">
-                    <?php if (isset($error)) {
-                        echo $error;
-                    }
-                    ?>
-                </h3>
+           
             </form>
         </div>
     </div>

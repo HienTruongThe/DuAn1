@@ -11,7 +11,6 @@ include "header.php";
 if (isset($_GET['btn'])) {
    $btn = $_GET['btn'];
    switch ($btn) {
-
          //CATERGORY
       case 'add_dm':
          if (isset($_POST['add_new']) && $_POST['add_new']) {

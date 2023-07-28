@@ -10,15 +10,24 @@
 
             <form action="index.php?btn=sign_in" method="post" class="sign_form">
                 <div class="input-group">
-                    <input  type="email" name="email" autocomplete="off" class="input-items">
+                    <input type="email" name="email" autocomplete="off" class="input-items">
                     <label class="user-label">Email</label>
-                    <!-- <p class="error">Email của bạn nhập không đúng &#9888  </p> -->
+                    <?php
+                    if (!empty($errors['email'])) {
+                        echo '<p class="error">' . $errors['email'] . '</p>';
+                    }
+
+                    ?>
                 </div>
 
                 <div class="input-group" style="margin-bottom: 0;">
-                    <input  type="password" name="password" autocomplete="off" class="input-items" id="show_pass">
+                    <input type="password" name="password" autocomplete="off" class="input-items" id="show_pass">
                     <label class="user-label">Pass Word</label>
-                    <!-- <p>Password của bạn nhập không đúng &#9888  </p> -->
+                    <?php
+                    if (!empty($errors['pass_word'])) {
+                        echo '<p class="error">' . $errors['pass_word'] . '</p>';
+                    }
+                    ?>
                 </div>
 
 

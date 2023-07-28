@@ -28,9 +28,9 @@
                             <label class="user-label">Giá Sản Phẩm</label>
                         </div>
                         <div class="input-group" style="margin:0 60px;">
-                    <p>Mô tả Sản Phẩm</p>
-                    <textarea name="" id="" cols="65" rows="10"></textarea>
-                </div>
+                            <p>Mô tả Sản Phẩm</p>
+                            <textarea name="" id="" cols="65" rows="10"></textarea>
+                        </div>
                     </div>
                     <div class="" style="margin-left: 60px;">
                         <div class="input-group">
@@ -41,19 +41,39 @@
                                 <option value="gìay MLB">Giày MLB</option>
                             </select>
                         </div>
-                        <div class="input-group">
-                            <p>Số Lượng</p>
-                            <input type="number" name="" id="">
-                        </div>
-                        <div class="input-group">
-                            <p>Size Sản Phẩm</p>
-                            <input type="checkbox">43
-                            <input type="checkbox">44
-                            <input type="checkbox">44
-                            <input type="checkbox">44
-                            <input type="checkbox">44
+                        <div class="variant">
+                        <div class="variant_title">
+                              <p>Size</p>
+                              <p style="margin-left: 25px;">Số Lượng</p>
+                            </div>
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
 
                         </div>
+
                         <div class="input-group">
                             <p>Hình ảnh Sản Phẩm</p>
                             <div class="">
@@ -63,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="" style="margin-left: 60px; margin-top: 20px;">
                     <input type="submit" name="add_new" value="Thêm Sản Phẩm" class="btn_submit" style="border: none;">
                     <input type="reset" value="Nhập Lại" class="btn_submit">
