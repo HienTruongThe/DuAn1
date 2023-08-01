@@ -68,7 +68,6 @@
                             <li><a href="index.php?btn=product">Giày MLB</a></li>
                             <li><a href="index.php?btn=product">Giày Vans</a></li>
                             <li><a href="index.php?btn=product">Giày JD</a></li>
-                            <li><a href="index.php?btn=product">Phụ Kiện</a></li>
                             <li><a href="index.php?btn=contact">Liên Hệ</a></li>
                         </ul>
                     </div>

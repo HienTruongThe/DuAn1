@@ -14,7 +14,7 @@
             <div style="width: 15%;" class="product-title">Thao Tác</div>
         </div>
         <?php
-        $sum = 0;
+        $sum = 1;
           $delete="return confirm('Bạn có chắc chắn muốn xóa')";
           foreach ($list_user as $list ) {
         

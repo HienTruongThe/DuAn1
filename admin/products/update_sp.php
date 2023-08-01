@@ -12,7 +12,6 @@
             <form action="index.php?btn=add_dm" method="post">
                 <div class="content_items">
                     <div class="">
-
                         <div class="input-group" style="margin-left: 60px;">
                             <input required="" type="text" name="text" autocomplete="off" class="items_input">
                             <label class="user-label">Mã Sản Phẩm</label>
@@ -28,33 +27,65 @@
                             <input required="" type="text" name="text" autocomplete="off" class="items_input">
                             <label class="user-label">Giá Sản Phẩm</label>
                         </div>
+                        <div class="input-group" style="margin:0 60px;">
+                            <p>Mô tả Sản Phẩm</p>
+                            <textarea name="" id="" cols="65" rows="10"></textarea>
+                        </div>
                     </div>
                     <div class="" style="margin-left: 60px;">
-                 
                         <div class="input-group">
-                            <p>Size Sản Phẩm</p>
-                            <input type="checkbox">43
-                            <input type="checkbox">44
-                            <input type="checkbox">44
-                            <input type="checkbox">44
-                            <input type="checkbox">44
+                            <p>Chọn Loại</p>
+                            <select name="" id="" style="margin: 0;">
+                                <option value="0">Chọn</option>
+                                <option value="giày jordan">Giày Jordan</option>
+                                <option value="gìay MLB">Giày MLB</option>
+                            </select>
+                        </div>
+                        <div class="variant">
+                            <div class="variant_title">
+                                <p>Size</p>
+                                <p style="margin-left: 25px;">Số Lượng</p>
+                            </div>
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
+                            <div class="variant_items">
+                                <input type="checkbox" class="size">44
+                                <input type="number" name="" id="" style="margin-left: 20px;">
+                            </div>
+
 
                         </div>
+
                         <div class="input-group">
                             <p>Hình ảnh Sản Phẩm</p>
                             <div class="">
-                                <img src="" id="img" height="30px" >
+                                <img src="" id="img" height="30px">
                             </div>
-                            <input type="file" id="file_img " multiple >
+                            <input type="file" id="file_img " multiple>
                         </div>
                     </div>
                 </div>
-                <div class="input-group" style="margin:0 60px;">
-                    <p>Mô tả Sản Phẩm</p>
-                    <textarea name="" id="" cols="65" rows="10"></textarea>
-                </div>
+
                 <div class="" style="margin-left: 60px; margin-top: 20px;">
-                    <input type="submit" name="add_new" value="Cập Nhật" class="btn_submit" style="border: none;">
+                    <input type="submit" name="add_new" value="Thêm Sản Phẩm" class="btn_submit" style="border: none;">
                     <input type="reset" value="Nhập Lại" class="btn_submit">
                     <a href="index.php?btn=list_sp"><input type="button" name="list_dm" value="Danh Sách" class="btn_submit" style="border: none;"></a>
                 </div>

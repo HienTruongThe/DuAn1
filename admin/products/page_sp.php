@@ -41,39 +41,7 @@
                                 <option value="gìay MLB">Giày MLB</option>
                             </select>
                         </div>
-                        <div class="variant">
-                        <div class="variant_title">
-                              <p>Size</p>
-                              <p style="margin-left: 25px;">Số Lượng</p>
-                            </div>
-                            <div class="variant_items">
-                                <input type="checkbox" class="size">44
-                                <input type="number" name="" id="" style="margin-left: 20px;">
-                            </div>
-
-                            <div class="variant_items">
-                                <input type="checkbox" class="size">44
-                                <input type="number" name="" id="" style="margin-left: 20px;">
-                            </div>
-
-                            <div class="variant_items">
-                                <input type="checkbox" class="size">44
-                                <input type="number" name="" id="" style="margin-left: 20px;">
-                            </div>
-
-                            <div class="variant_items">
-                                <input type="checkbox" class="size">44
-                                <input type="number" name="" id="" style="margin-left: 20px;">
-                            </div>
-
-                            <div class="variant_items">
-                                <input type="checkbox" class="size">44
-                                <input type="number" name="" id="" style="margin-left: 20px;">
-                            </div>
-
-
-                        </div>
-
+                     
                         <div class="input-group">
                             <p>Hình ảnh Sản Phẩm</p>
                             <div class="">

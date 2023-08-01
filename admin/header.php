@@ -11,7 +11,7 @@
 
 <body>
     <div class="page">
-        <header>
+        <header class="wrapper-nav">
             <div class="account">
                 <img src="../img/1967574.png" alt="">
                 <h2>
@@ -21,7 +21,6 @@
             </div>
             <div class="category_admin">
                 <ul>
-                    <li></li>
                     <li><a href="index.php?btn=list_dm"><i class="fa-solid fa-bars"></i> Danh Mục</a></li>
                     <li><a href="index.php?btn=list_sp"><i class="fa-brands fa-product-hunt"></i> Sản Phẩm</a></li>
                     <li><a href="index.php?btn=page_kh"><i class="fa-solid fa-users"></i> Khách Hàng </a></li>
